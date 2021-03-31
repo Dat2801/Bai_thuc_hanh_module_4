@@ -14,7 +14,7 @@
     <div>
         <label>Thành phố</label>
         <input type="text" th:field="*{name}"/>
-        <span th:if="${#fields.hasErrors()}" th:errors="*{name}"></span>
+        <span th:if="${#fields.hasErrors()}" th:errors="*{name}" style="color: red"></span>
     </div>
     <div>
         <label>Quốc gia</label>
