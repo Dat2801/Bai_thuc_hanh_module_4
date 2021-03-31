@@ -10,11 +10,11 @@
 </head>
 <body>
 <h1>Form create</h1>
-<form id="form" th:object="${c}" method="post">
+<form id="form" th:object="${c}" method="post" action="/cities/create">
     <div>
         <label>Thành phố</label>
         <input type="text" th:field="*{name}"/>
-        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+        <span th:if="${#fields.hasErrors()}" th:errors="*{name}"></span>
     </div>
     <div>
         <label>Quốc gia</label>

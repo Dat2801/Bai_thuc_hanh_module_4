@@ -12,8 +12,7 @@ public class City {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @Size(min = 2, max = 30, message = "Cần nhập vào từ 2 đến 30 kí tự")
-    @NotEmpty
+    @Size(min = 2, max = 30, message = "Cần nhập vào từ 2 đến 30 kí tự")
     private String name;
 
     private double area;

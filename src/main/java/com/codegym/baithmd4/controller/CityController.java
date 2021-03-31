@@ -65,10 +65,10 @@ public class CityController {
     }
 
     @PostMapping("/create")
-    public ModelAndView createCity(@Validated @ModelAttribute City city, BindingResult bindingResult) {
+    public ModelAndView createCity(@Validated @ModelAttribute("c") City city, BindingResult bindingResult) {
         if (bindingResult.hasFieldErrors()){
             ModelAndView modelAndView = new ModelAndView("city/create");
-//            modelAndView.addObject("c",city);
+            modelAndView.addObject("c",city);
             return modelAndView;
         }
         cityService.save(city);
